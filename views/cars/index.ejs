@@ -1,0 +1,34 @@
+<%- include("../partials/head") %>
+
+<a href="/admin/car/create">
+    <button>create product baru</button>
+</a>
+
+    <body>
+        <h1>Tabel produk car</h1>
+        <a href="/admin/car">
+            <button>semua</button>
+        </a>
+        <a href="/admin/car?filter=small">
+            <button>small</button>
+        </a>
+        <a href="/admin/car?filter=medium">
+            <button>medium</button>
+        </a>
+        <a href="/admin/car?filter=large">
+            <button>large</button>
+        </a>
+        <div class="kartu">
+            <img src="<%= car.imgUrl %>" alt="<%= car.merek %> <%= car.model %>">
+            <p><%= car.nama %></p>
+            <h3><%= car.sewa %></h3>
+            <p>Tahun: <%= car.tahun %></p>
+            <a href="/cars/delete/<%= car.id %>">Delete</a>
+            <a href="/cars/delete/<%= car.id %>">Edit</a>
+          </div>
+          
+
+        
+    </body>
+
+    </html>
